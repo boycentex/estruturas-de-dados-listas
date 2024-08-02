@@ -1,0 +1,36 @@
+#include<stdio.h> 
+#include<math.h> 
+#include<string.h> 
+#include<locale.h> 
+#include<stdlib.h> 
+#include<ctype.h>
+
+union tipo{ 
+	char bebida[50];
+};
+
+typedef struct{ 
+	char nome[50];
+	float preco;
+	tipo tipo;
+}Produto;
+
+
+int main() {
+    setlocale(LC_ALL, "portuguese");	
+	
+	Produto p;
+	
+	printf("informe o nome do produto\n");
+	scanf(" %[^\n]", p.nome);
+	printf("informe o preço\n");
+	scanf("%f", &p.preco);
+	printf("informe o tipo do produto\n");
+	scanf(" %[^\n]", p.tipo.bebida);
+	
+	printf("%s\n", p.nome);
+	printf("%.2f\n", p.preco);
+	printf("%s\n", p.tipo.bebida);
+		
+	return 0;
+}
