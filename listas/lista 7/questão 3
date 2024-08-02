@@ -1,0 +1,71 @@
+#include<stdio.h> 
+#include<math.h> 
+#include<string.h> 
+#include<locale.h> 
+#include<stdlib.h> 
+#include<ctype.h>
+
+enum Mes {JANEIRO=1, FEVEREIRO, MARC, ABRIL, MAIO,
+JUNHO, JULHO, AGOSTO, SETEMBRO, OUTUBRO, NOVEMBRO, DEZEMBRO};
+
+typedef struct{ 
+	int dia;
+	Mes mes;
+	int ano;
+}Data;
+
+
+int main() {
+    setlocale(LC_ALL, "portuguese");	
+	
+	Data p;
+	printf("informe o dia\n");
+	scanf("%d", &p.dia);
+	printf("informe o ano\n");
+	scanf("%d", &p.ano);
+	printf("agora para o mes digite o numero correspondente ao mes do ano\n");
+	scanf("%d", &p.mes);
+	switch(p.mes){ 
+		case JANEIRO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case FEVEREIRO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case MARC:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case ABRIL:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case MAIO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case JUNHO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case JULHO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case AGOSTO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case SETEMBRO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case OUTUBRO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case NOVEMBRO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		case DEZEMBRO:
+			printf("Data: %d/%d/%d \n", p.dia, p.mes, p.ano);
+		break;
+		
+		default:;
+		printf("opção invalida\n");
+	}
+	
+	return 0;
+}
